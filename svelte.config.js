@@ -1,8 +1,11 @@
-import adapter from '@sveltejs/adapter-cloudflare';
+import adapter from '@sveltejs/adapter-static';
 
 const config = {
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+			prerender: {
+				enabled: true
+			}
 	}
 };
 
