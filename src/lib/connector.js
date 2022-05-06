@@ -1,20 +1,20 @@
 import {
 	Directus
 } from '@directus/sdk';
-// import 'dotenv/config';
+import 'dotenv/config';
 
 const directus = new Directus(process.env.VITE_DIRECTUS_URL);
 async function getDirectusClient() {
 	if (directus.auth.token) return directus;
 
 	try {
-		if (process.env.VITE_DIRECTUS_EMAIL && process.env.VITE_DIRECTUS_PASSWORD) {
+		if (process.env.DIRECTUS_EMAIL && process.env.DIRECTUS_PASSWORD) {
 			await directus.auth.login({
-				email: process.env.VITE_DIRECTUS_EMAIL,
-				password: process.env.VITE_DIRECTUS_PASSWORD
+				email: process.env.DIRECTUS_EMAIL,
+					password: process.env.DIRECTUS_PASSWORD
 			});
-		} else if (process.env.VITE_DIRECTUS_STATIC_TOKEN) {
-			await directus.auth.static(process.env.VITE_DIRECTUS_STATIC_TOKEN);
+		} else if (process.env.DIRECTUS_STATIC_TOKEN) {
+			await directus.auth.static(process.env.DIRECTUS_STATIC_TOKEN);
 		}
 	} catch (err) {
 		if (err.parent.code === 'ECONNREFUSED') {
