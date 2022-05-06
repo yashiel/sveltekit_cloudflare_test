@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    export let articles;
+</script>
+
+{#each articles as { title, content, slug }}
+    <h1><a sveltekit:prefetch href={`/post/${slug}`}>{title}</a></h1>
+    {@html content}
+{/each}
