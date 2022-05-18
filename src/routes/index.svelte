@@ -6,3 +6,5 @@
     <h1><a sveltekit:prefetch href={`/post/${slug}`}>{title}</a></h1>
     {@html content}
 {/each}
+
+<a sveltekit:prefetch href="{`/page/2`}"> Next Page</a>
