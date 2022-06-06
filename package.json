@@ -10,15 +10,15 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
-    "@sveltejs/adapter-cloudflare": "^1.0.0-next.19",
-    "@sveltejs/adapter-static": "^1.0.0-next.29",
+    "@sveltejs/adapter-cloudflare": "^1.0.0-next.23",
+    "@sveltejs/adapter-static": "^1.0.0-next.34",
     "@sveltejs/kit": "next",
     "html-minifier": "^4.0.0",
-    "svelte": "^3.44.0"
+    "svelte": "^3.48.0"
   },
   "type": "module",
   "dependencies": {
-    "@directus/sdk": "^9.10.0",
-    "dotenv": "^16.0.0"
+    "@directus/sdk": "^9.12.1",
+    "dotenv": "^16.0.1"
   }
 }
