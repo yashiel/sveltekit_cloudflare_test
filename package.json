@@ -18,7 +18,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@directus/sdk": "10.1.4",
+    "@directus/sdk": "12.1.0",
     "dotenv": "16.0.1"
   }
 }
